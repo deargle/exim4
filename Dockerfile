@@ -1,6 +1,6 @@
 # configurable exim4
 #
-# Version 0.0.1
+# Version 0.0.2
 #
 # Based on tianon/exim4
 #
