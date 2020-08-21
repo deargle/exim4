@@ -1,0 +1,4 @@
+DKIM_DOMAIN = island.byu.edu
+DKIM_SELECTOR = 20160822
+DKIM_CANON = relaxed
+DKIM_PRIVATE_KEY = /etc/exim4/dkim/island.byu.edu-dkim-private.pem

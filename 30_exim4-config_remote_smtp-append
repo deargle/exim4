@@ -1,0 +1,20 @@
+# DKIM setup copied from 30_exim4-config_remote_smtp
+# see: https://serverfault.com/a/782069/117087
+.ifdef DKIM_DOMAIN
+  dkim_domain = DKIM_DOMAIN
+.endif
+.ifdef DKIM_SELECTOR
+  dkim_selector = DKIM_SELECTOR
+.endif
+.ifdef DKIM_PRIVATE_KEY
+  dkim_private_key = DKIM_PRIVATE_KEY
+.endif
+.ifdef DKIM_CANON
+  dkim_canon = DKIM_CANON
+.endif
+.ifdef DKIM_STRICT
+  dkim_strict = DKIM_STRICT
+.endif
+.ifdef DKIM_SIGN_HEADERS
+  dkim_sign_headers = DKIM_SIGN_HEADERS
+.endif
