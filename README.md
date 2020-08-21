@@ -9,6 +9,11 @@ This is based upon [tianon/exim4](https://github.com/tianon/dockerfiles/tree/mas
 
 place the dkim key in this folder, peek in the dockerfile to see what it should be named.
 
+then,
+
+	docker build --tag exim4:1.0 .
+	docker run -d --name exim4 --restart always --network nginx-proxy exim4:1.0
+
 # Linking to another container
 
 This can then be linked to another contain to be used as the SMTP host, e.g. for use with gameldar/bugzilla container you'd use:
