@@ -19,7 +19,7 @@ To run use the environment variables to configure the Gmail account:
 By default all the inet interfaces are queried for their networking information to determine the relay networks, however this can be overwritten
 by specifying the RELAY_NETS environment variable when starting:
 
-  docker run -d --naem exim4 -e GMAIL_USER=youruser@yourdomain.com -e GMAIL_PASSWORD=yourpasswordhere -e RELAY_NETS=192.168.1.1/24 gameldar/exim4
+  docker run -d --name exim4 -e GMAIL_USER=youruser@yourdomain.com -e GMAIL_PASSWORD=yourpasswordhere -e RELAY_NETS=192.168.1.1/24 gameldar/exim4
 
 
 # Linking to another container

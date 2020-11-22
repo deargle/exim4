@@ -27,5 +27,9 @@ fi
 
 /etc/exim4/set-exim4-update-conf "${opts[@]}"
 
-#manually start supervisord
-/usr/bin/supervisord -c /etc/supervisord.conf
+if [ "$(id -u)" = '0' ]; then
+	mkdir -p /var/spool/exim4 /var/log/exim4 || :
+	chown -R Debian-exim:Debian-exim /var/spool/exim4 /var/log/exim4 || :
+fi
+
+exec "$@"
