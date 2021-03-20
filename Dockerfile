@@ -18,7 +18,7 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # DKIM
 COPY 10_exim4-config_transport-macros-append /etc/exim4/
-RUN cat 10_exim4-config_transport-macros-append >> /etc/exim4/conf.d/transport/10_exim4-config_transport-macros
+RUN cat /etc/exim4/10_exim4-config_transport-macros-append >> /etc/exim4/conf.d/transport/10_exim4-config_transport-macros
 
 COPY 30_exim4-config_remote_smtp-append /etc/exim4/
 RUN cat /etc/exim4/30_exim4-config_remote_smtp-append >> /etc/exim4/conf.d/transport/30_exim4-config_remote_smtp
